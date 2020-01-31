@@ -123,4 +123,9 @@ class Parameters
      * })
      */
     public $columns = [];
+
+    /**
+     * @Assert\Type(type="array")
+     */
+    public $customData = [];
 }
