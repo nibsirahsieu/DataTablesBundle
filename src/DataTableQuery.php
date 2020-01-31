@@ -31,6 +31,7 @@ class DataTableQuery extends ValueObject
     protected $search;
     protected $order;
     protected $columns;
+    protected $customData;
 
     /**
      * Initializing constructor.
@@ -58,5 +59,7 @@ class DataTableQuery extends ValueObject
                 new Search($column['search']['value'], (bool) $column['search']['regex'])
             );
         }
+
+        $this->customData = $params->customData;
     }
 }
