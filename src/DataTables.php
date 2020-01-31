@@ -77,8 +77,8 @@ class DataTables implements DataTablesInterface
             'columns',
         ];
 
-        $params->draw    = $request->getInt('draw');
-        $params->start   = $request->getInt('start');
+        $params->draw    = $request->get('draw');
+        $params->start   = $request->get('start');
         $params->length  = $request->get('length', -1);
         $params->search  = $request->get('search', []);
         $params->order   = $request->get('order', []);
